@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #6ba6f6;
+      }
+
+      .header {
+        background-color: blue;
+        height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .add-bud-cont {
+        height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fee4c3;
+        padding: 50px;
+      }
+
+      .tab-head {
+        height: 30px;
+        background-color: blue;
+        width: 100%;
+      }
+      table {
+        width: 100%;
+      }
+      th {
+        background-color: blue;
+      }
+
+      td {
+        background-color: #fee4c3;
+      }
+
+      tr,
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+      function data() {
+        let formData = document.getElementById("addForm");
+        let table = document.getElementById("table-cont");
+        let newRow = table.insertRow(table.rows.length);
+        let removeList = document.createElement("button");
+        removeList.textContent = "DELETE";
+        removeList.addEventListener("click", () => {
+          table.deleteRow(newRow);
+        });
+        newRow.insertCell(0).innerHTML = formData[0].value;
+        newRow.insertCell(1).innerHTML = formData[1].value;
+        newRow.insertCell(2).innerHTML = formData[2].value;
+        newRow.insertCell(3).append(removeList);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header">
+      <p>Add a new Transaction</p>
+    </div>
+    <div class="main-container">
+      <div class="add-bud-cont">
+        <form id="addForm">
+          <div>
+            <label>Type: </label>
+            <select id="bud-type">
+              <option value="Income">Income</option>
+              <option value="Expense">Expense</option>
+            </select>
+          </div>
+          <div>
+            <label>Name: </label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Amount: </label>
+            <input type="text" />
+          </div>
+          <div></div>
+        </form>
+        <button onclick="data()">Add to Transactions</button>
+      </div>
+
+      <div class="bud-table">
+        <table id="table-cont">
+          <tr id="tab-head">
+            <th>Type</th>
+            <th>Name</th>
+            <th>Amount</th>
+            <th>Options</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

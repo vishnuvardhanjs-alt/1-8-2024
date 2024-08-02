@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Certificate</title>
+    <link href="./css/cert.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/number-to-words"></script>
+  </head>
+  <body>
+    <script src="./scripts/cert.js"></script>
+    <div class="main-container">
+      <div class="certificate">
+        <div class="top-part">
+          <div class="top-top">
+            <p style="font-weight: 700">
+              Sr. No. <span style="color: #6d302a">00000000</span>
+            </p>
+            <img class="hicet-logo" src="./assets/hicet_logo.jpeg" alt="" />
+            <img class="qr-img" src="./assets/qr.png" alt="" />
+          </div>
+          <img class="banner" src="./assets/banner.png" alt="" />
+        </div>
+        <table class="table-top">
+          <tr>
+            <td colspan="2">
+              Name of the Candidate <br />
+              (Candidate's Name)
+            </td>
+            <td colspan="2">
+              Course Name with Code <br />
+              Diploma in Fire & Safety Management DFS012
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1">
+              Reg No <br />
+              (Registration Number)
+            </td>
+            <td colspan="1">
+              Reg No <br />
+              (Registration Number)
+            </td>
+            <td>
+              (Authorized Training Centre's Name) <br />
+              (Authorized Training Centre's Code)
+            </td>
+          </tr>
+        </table>
+        <table class="table-bot">
+          <tr>
+            <td rowspan="2">Subject Code</td>
+            <td rowspan="2">Subject Name</td>
+            <td rowspan="2">Max Marks</td>
+            <td rowspan="1" colspan="3">Marks Obtained In Figures</td>
+            <td rowspan="2">Total In Words</td>
+          </tr>
+          <tr>
+            <td>Theory</td>
+            <td>Practical</td>
+            <td>Total</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-101</td>
+            <td>Theory Of Computing</td>
+            <td>100</td>
+            <td><input id="toc_t" type="text" /></td>
+            <td>XX</td>
+            <td id="toc_tm">00</td>
+            <td id="toc_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-102</td>
+            <td>Web Technologies</td>
+            <td>100</td>
+            <td><input id="wt_t" type="text" /></td>
+            <td>XX</td>
+            <td id="wt_tm">00</td>
+            <td id="wt_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-103</td>
+            <td>Mobile Computing</td>
+            <td>100</td>
+            <td><input id="mc_t" type="text" /></td>
+            <td>XX</td>
+            <td id="mc_tm">00</td>
+            <td id="mc_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-104</td>
+            <td>Micro Processors</td>
+            <td>100</td>
+            <td><input id="mp_t" type="text" /></td>
+            <td>XX</td>
+            <td id="mp_tm">00</td>
+            <td id="mp_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-105</td>
+            <td>Design Thinking</td>
+            <td>100</td>
+            <td><input id="dt_t" type="text" /></td>
+            <td>XX</td>
+            <td id="dt_tm">00</td>
+            <td id="dt_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-106</td>
+            <td>Practical 1</td>
+            <td>100</td>
+            <td>XX</td>
+            <td><input id="p1" type="text" /></td>
+            <td id="p1_tm">00</td>
+            <td id="p1_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-107</td>
+            <td>Practical 2</td>
+            <td>100</td>
+            <td>XX</td>
+            <td><input id="p2" type="text" /></td>
+            <td id="p2_tm">00</td>
+            <td id="p2_iw">Zero Zero</td>
+          </tr>
+          <tr class="bot-row">
+            <td>DFS012-108</td>
+            <td>Practical 3</td>
+            <td>100</td>
+            <td>XX</td>
+            <td><input id="p3" type="text" /></td>
+            <td id="p3_tm">00</td>
+            <td id="p3_iw">Zero Zero</td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              Grand Total
+              <span id="tot_marks">000</span><br />in Words
+              <span id="tot_iw">Zero</span>
+            </td>
+          </tr>
+        </table>
+        <div class="table-bot-bot">
+          <p>Date: (Date of Result)</p>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+            "
+          >
+            <p>
+              (Signature of Deputy <br />
+              Controller of Examination)
+            </p>
+            <p>Deputy Controller of Examination</p>
+          </div>
+        </div>
+        <button
+          style="float: right; margin: 5px"
+          id="form-data"
+          onclick="save_cert()"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
